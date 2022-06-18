@@ -1,6 +1,6 @@
 {
   "name": "status.stuv.app_frontend",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3003",
@@ -10,9 +10,9 @@
     "docker:build": "docker build -t maxdola/status.stuv.app_frontend:latest -t status.stuv/stuv.app_frontend:0.0.1 .",
     "docker:push": "docker push maxdola/status.stuv.app_frontend --all-tags",
     "docker:run": "yarn docker:build && yarn docker:push",
-    "docker:ma:build": "docker buildx build --platform linux/amd64,linux/arm64 -t maxdola/status.stuv.app_frontend:latest -t maxdola/status.stuv.app_frontend:0.0.1 .",
-    "docker:ma:prod": "docker buildx build --platform linux/amd64,linux/arm64 --push -t maxdola/status.stuv.app_frontend:latest -t maxdola/status.stuv.app_frontend:0.0.1 .",
-    "docker:ma:beta": "docker buildx build --platform linux/amd64,linux/arm64 --push -t maxdola/status.stuv.app_frontend:beta -t maxdola/status.stuv.app_frontend:0.0.2 ."
+    "docker:ma:build": "docker buildx build --platform linux/amd64,linux/arm64 -t maxdola/status.stuv.app_frontend:latest -t maxdola/status.stuv.app_frontend:0.0.2 .",
+    "docker:ma:prod": "docker buildx build --platform linux/amd64,linux/arm64 --push -t maxdola/status.stuv.app_frontend:latest -t maxdola/status.stuv.app_frontend:0.0.2 .",
+    "docker:ma:beta": "docker buildx build --platform linux/amd64,linux/arm64 --push -t maxdola/status.stuv.app_frontend:beta -t maxdola/status.stuv.app_frontend:0.0.3 ."
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
@@ -21,6 +21,7 @@
     "@nivo/pie": "^0.73.0",
     "animate.css": "^4.1.1",
     "axios": "^0.21.4",
+    "classnames": "^2.3.1",
     "moment": "^2.29.1",
     "next": "^12.0.1",
     "next-pwa": "^5.3.1",
