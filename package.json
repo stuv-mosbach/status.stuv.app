@@ -1,0 +1,44 @@
+{
+  "name": "status.stuv.app_frontend",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3003",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "docker:build": "docker build -t maxdola/status.stuv.app_frontend:latest -t status.stuv/stuv.app_frontend:0.0.1 .",
+    "docker:push": "docker push maxdola/status.stuv.app_frontend --all-tags",
+    "docker:run": "yarn docker:build && yarn docker:push",
+    "docker:ma:build": "docker buildx build --platform linux/amd64,linux/arm64 -t maxdola/status.stuv.app_frontend:latest -t maxdola/status.stuv.app_frontend:0.0.1 .",
+    "docker:ma:prod": "docker buildx build --platform linux/amd64,linux/arm64 --push -t maxdola/status.stuv.app_frontend:latest -t maxdola/status.stuv.app_frontend:0.0.1 .",
+    "docker:ma:beta": "docker buildx build --platform linux/amd64,linux/arm64 --push -t maxdola/status.stuv.app_frontend:beta -t maxdola/status.stuv.app_frontend:0.0.2 ."
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.4.1",
+    "@heroicons/react": "^1.0.4",
+    "@nivo/core": "^0.73.0",
+    "@nivo/pie": "^0.73.0",
+    "animate.css": "^4.1.1",
+    "axios": "^0.21.4",
+    "moment": "^2.29.1",
+    "next": "^12.0.1",
+    "next-pwa": "^5.3.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-infinite-scroll-component": "^6.1.0",
+    "tabler-icons-react": "^1.35.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "@types/classnames": "^2.3.1",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^12.12.21",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "autoprefixer": "10.4.5",
+    "postcss": "^8.3.0",
+    "tailwindcss": "3.1.3",
+    "typescript": "4.4.3"
+  }
+}
